@@ -6,7 +6,7 @@ from entities import PersoPlayer
 from entities import PersoGuard
 
 class AvoidTheGuard(multiplayer.Minigame):
-    name = 'Avoid the guards!'
+    name = 'Push him on the guard!'
     max_duration = 10000
 
     def __init__(self, game):
@@ -28,7 +28,7 @@ class AvoidTheGuard(multiplayer.Minigame):
         self.currentTime = pygame.time.get_ticks()/1000.0
 
     def initEnnemies(self):
-        for index in range(self.difficulty+3):
+        for index in range(self.difficulty+6):
             self.enemies.append(PersoGuard(375, 300, "./res/img/avoid_the_guard/Guard.png", self.difficulty, self.players))
 
     def tick(self):

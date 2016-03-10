@@ -7,7 +7,7 @@ from entities import PersoPlayer
 from entities import Ring
 
 class StayInTheRing(multiplayer.Minigame):
-    name = 'Stay in the dome!'
+    name = 'Knock him out of ring!'
     max_duration = 10000
 
     def __init__(self, game):
