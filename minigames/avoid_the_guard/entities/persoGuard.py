@@ -1,13 +1,11 @@
 from perso import Perso
 import random
 
-class PersoLeprechaun(Perso):
+class PersoGuard(Perso):
     def __init__(self, x, y, path, difficulty, players):
-        self.TELEPORT = 5
         self.KEEP_DIR_TIME = 0.25
 
         Perso.__init__(self, x, y, path, difficulty)
-        self.money = 1
         self.difficulty = difficulty
         self.players = players
         self.keepDirTime = 0.5
@@ -30,6 +28,3 @@ class PersoLeprechaun(Perso):
             self.move("down")
         elif self.dir == 3:
             self.move("left")
-
-        if self.difficulty >= self.TELEPORT and random.randint(0, 1000) < 5:
-            self.pos = [random.randint(25, 725), random.randint(200, 525)]

@@ -3,7 +3,7 @@ import input_map
 from minigames import minigame
 from minigames import multiplayer
 from entities import PersoPlayer
-from entities import PersoLeprechaun
+from entities import PersoGuard
 
 class AvoidTheGuard(multiplayer.Minigame):
     name = 'Avoid the guards!'
@@ -29,7 +29,7 @@ class AvoidTheGuard(multiplayer.Minigame):
 
     def initEnnemies(self):
         for index in range(self.difficulty+3):
-            self.enemies.append(PersoLeprechaun(375, 300, "./res/img/avoid_the_guard/Guard.png", self.difficulty, self.players))
+            self.enemies.append(PersoGuard(375, 300, "./res/img/avoid_the_guard/Guard.png", self.difficulty, self.players))
 
     def tick(self):
         self.score[0] = self.players[0].life

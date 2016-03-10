@@ -1,4 +1,4 @@
 from perso import Perso
-from persoLeprechaun import PersoLeprechaun
+from persoGuard import PersoGuard
 from persoPlayer import PersoPlayer
 from sprite import Sprite
